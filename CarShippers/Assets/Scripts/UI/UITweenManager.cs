@@ -10,10 +10,11 @@ public class UITweenManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(Instance);
         }
         else
         {
-            DontDestroyOnLoad(Instance);
+            Destroy(gameObject);
         }
     }
     public void CloseSettingPanel()

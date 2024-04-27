@@ -10,10 +10,11 @@ public class PlayerData : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(Instance);
         }
         else
         {
-            DontDestroyOnLoad(Instance);
+            Destroy(gameObject);
         }
     }
     // if not it returns -1

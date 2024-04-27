@@ -48,10 +48,11 @@ public class UIManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(Instance);
         }
         else
         {
-            DontDestroyOnLoad(Instance);
+            Destroy(gameObject);
         }
     }
     public void ToggleBlurPanel(bool state)
